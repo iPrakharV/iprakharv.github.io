@@ -1,5 +1,10 @@
-# iprakharv.github.io
+# Naem Azam
 
-This is my portfolio/resume website. Nothing much, just basic information if I ever need to use this in resumes, socials, etc.
+I'm Self-taught Programmer, Technophile And an open-source enthusiast and maintainer. 
 
-Contact me - iprakharv@gmail.com
+<p align="center">
+  <h1 align="center">Summary Of My Github Live Graph</h1>
+</p>  
+
+[![contributions](https://activity-graph.herokuapp.com/graph?username=naemazam&theme=xcode&area=true)](https://github.com/naemazam)
+![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=naemazam&theme=github_dark)
