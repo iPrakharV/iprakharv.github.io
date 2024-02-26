@@ -1,0 +1,859 @@
+Start Client Area -->
+<div class="rn-client-area rn-section-gap section-separator" id="clients">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title">
+          <span class="subtitle">Popular Clients</span>
+          <h2 class="title">Awesome Works</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="row row--25 mt--50 mt_md--40 mt_sm--40">
+      <div class="col-lg-4">
+        <div class="d-flex flex-wrap align-content-start h-100">
+          <div
+            class="position-sticky clients-wrapper sticky-top rbt-sticky-top-adjust"
+          >
+            <ul
+              class="nav tab-navigation-button flex-column nav-pills me-3"
+              id="v-pills-tab"
+              role="tablist"
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="v-pills-home-tab"
+                  data-toggle="tab"
+                  href="#soft"
+                  role="tab"
+                  aria-selected="true"
+                  >Software</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  id="v-pills-profile-tab"
+                  data-toggle="tab"
+                  href="#it"
+                  role="tab"
+                  aria-selected="true"
+                  >IT Supports</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="v-pills-wordpress-tab"
+                  data-toggle="tab"
+                  href="#v-pills-Wordpress"
+                  role="tab"
+                  aria-selected="true"
+                  >Wordpress</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="v-pills-settings-tabs"
+                  data-toggle="tab"
+                  href="#v-pills-settings"
+                  role="tab"
+                  aria-selected="true"
+                  >HTML to React</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="v-pills-laravel-tabs"
+                  data-toggle="tab"
+                  href="#v-pills-laravel"
+                  role="tab"
+                  aria-selected="true"
+                  >Block Chain
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="v-pills-python-tabs"
+                  data-toggle="tab"
+                  href="#v-pills-python"
+                  role="tab"
+                  aria-selected="true"
+                  >System Admin</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-8">
+        <div class="tab-area">
+          <div class="d-flex align-items-start">
+            <div class="tab-content" id="v-pills-tabContent">
+              <div
+                class="tab-pane fade"
+                id="soft"
+                role="tabpanel"
+                aria-labelledby="v-pills-home-tab"
+              >
+                <div class="client-card">
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/client1.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span
+                          ><a
+                            href="https://naemazam.github.io/Voov-Automation/"
+                            >Voov</a
+                          ></span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/localfile.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span
+                          ><a
+                            href="https://github.com/naemazam/Local-File-Finder"
+                            >File Finder</a
+                          ></span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/mon.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span
+                          ><a
+                            href="https://naemazam.github.io/The-Monitor/"
+                            >The Monitor</a
+                          ></span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/epass.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span
+                          ><a
+                            href="https://github.com/naemazam/Remember-Password"
+                            >Remember Password</a
+                          ></span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+                </div>
+              </div>
+
+              <div
+                class="tab-pane fade show active"
+                id="it"
+                role="tabpanel"
+                aria-labelledby="v-pills-profile-tab"
+              >
+                <div class="client-card">
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/cq.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span
+                          ><a href="http://www.cqupt.edu.cn/"
+                            >CQUPT</a
+                          ></span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/client2.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span
+                          ><a href="http://net2.life/"
+                            >Net 2 Life</a
+                          ></span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/chinamobile.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span><a href="#">China Mobile</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/google.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span><a href="#">Google</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+                </div>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="v-pills-Wordpress"
+                role="tabpanel"
+                aria-labelledby="v-pills-wordpress-tab"
+              >
+                <div class="client-card">
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/client2.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span><a href="#">John Due</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/client2.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span
+                          ><a href="www.net2.life">Net 2 Life</a></span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/client2.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span><a href="#">Add Dev</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/client2.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span><a href="#">Marth Smiths</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+                </div>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="v-pills-settings"
+                role="tabpanel"
+                aria-labelledby="v-pills-settings-tabs"
+              >
+                <div class="client-card">
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/sm.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span
+                          ><a
+                            href="https://naemazam.github.io/SHADOW-MEDICAL/"
+                            >Shadow Medical</a
+                          ></span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/client2.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span><a href="#">net 2 life</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/client3.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span
+                          ><a href="https://naemazam.github.io/CV-Baba/"
+                            >CV Baba</a
+                          ></span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/ch.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span
+                          ><a href="https://cheatsheetshub.github.io/"
+                            >Cheatsheets Hub</a
+                          ></span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/gy.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span
+                          ><a href="https://gyzhiyuan.agency/"
+                            >Gyzhiyuan Agency</a
+                          ></span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/client5.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span><a href="#">Adon Smith</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/client1.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span><a href="#">Smitha Mila</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/client2.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span><a href="#">Sultana Mila</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/client1.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span><a href="#">Jannat</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/client5.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span><a href="#">Mila Dus</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/client1.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span><a href="#">Marth Smiths</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/client3.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span><a href="#">Marth Smiths</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+                </div>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="v-pills-laravel"
+                role="tabpanel"
+                aria-labelledby="v-pills-laravel-tabs"
+              >
+                <div class="client-card">
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/client1.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span><a href="#">John Due</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/client2.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span><a href="#">Smiths Marth</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/client3.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span><a href="#">Add Dev</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/client4.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span><a href="#">Jone Due</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/client1.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span><a href="#">Jannat</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/client3.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span><a href="#">Marth Smiths</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+                </div>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="v-pills-python"
+                role="tabpanel"
+                aria-labelledby="v-pills-python-tabs"
+              >
+                <div class="client-card">
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/red.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span><a href="#">Red-hat</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/client2.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span><a href="#">net 2 life</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/ibm.svg"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span><a href="#">IBM</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/icons-13.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span><a href="#">Jone Due</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/icons-15.png"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span><a href="#">John Due</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+
+                  <!-- Start Single Brand  -->
+                  <div class="main-content">
+                    <div class="inner text-center">
+                      <div class="thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/images/client/png/walton.jpg"
+                            alt="Client-image"
+                        /></a>
+                      </div>
+                      <div class="seperator"></div>
+                      <div class="client-name">
+                        <span><a href="#">Adon Smith</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Single Brand  -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End client section
