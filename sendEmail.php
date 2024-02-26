@@ -1,47 +1,55 @@
 <?php
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = strip_tags(trim($_POST["contact-name"]));
-    $email = filter_var(trim($_POST["contact-email"]), FILTER_SANITIZE_EMAIL);
-    $phone = trim($_POST["contact-phone"]);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Sanitize and validate input
+    $name = strip_tags(trim($_POST["name"]));
+    $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
     $subject = trim($_POST["subject"]);
-    $message = trim($_POST["contact-message"]);
+    $message = trim($_POST["message"]);
 
-    // Check that data was sent to the mailer.
-    if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        // Set a 400 (bad request) response code and exit.
+    // Check that data was sent to the mailer
+    if (empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        // Invalid input
         http_response_code(400);
         echo "Please complete the form and try again.";
         exit;
     }
 
-    // Set the recipient email address.
-    $recipient = "iprakharv@gmail.com"; // REPLACE WITH YOUR EMAIL
+    // PHPMailer setup
+    require "vendor/autoload.php";
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
 
-    // Set the email subject.
-    $subject = "New contact from $name";
+    $mail = new PHPMailer(true);
 
-    // Build the email content.
-    $email_content = "Name: $name\n";
-    $email_content .= "Email: $email\n\n";
-    $email_content .= "Phone: $phone\n\n";
-    $email_content .= "Message:\n$message\n";
+    // Server settings
+    // $mail->SMTPDebug = SMTP::DEBUG_SERVER; // Enable verbose debug output
+    $mail->isSMTP(); // Send using SMTP
+    $mail->Host = 'smtp.sendgrid.net'; // Set the SMTP server to send through
+    $mail->SMTPAuth = true; // Enable SMTP authentication
+    $mail->Username = 'apikey'; // SMTP username
+    $mail->Password = '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'; // SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+    $mail->Port = 456; // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
-    // Build the email headers.
-    $email_headers = "From: $name <$email>";
+    // Recipients
+    $mail->setFrom($email, $name);
+    $mail->addAddress('iprakharv@gmail.com'); // Add a recipient
 
-    // Send the email.
-    if (mail($recipient, $subject, $email_content, $email_headers)) {
-        // Set a 200 (okay) response code.
+    // Content
+    $mail->isHTML(true); // Set email format to HTML
+    $mail->Subject = $subject;
+    $mail->Body = $message;
+
+    // Send the email
+    if ($mail->send()) {
         http_response_code(200);
         echo "Thank You! Your message has been sent.";
     } else {
-        // Set a 500 (internal server error) response code.
         http_response_code(500);
         echo "Oops! Something went wrong, and we couldn't send your message.";
     }
-
 } else {
-    // Not a POST request, set a 403 (forbidden) response code.
+    // Not a POST request
     http_response_code(403);
     echo "There was a problem with your submission, please try again.";
 }
