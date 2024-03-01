@@ -1,4 +1,4 @@
-# iPrakharV
+# iPrakharV's Personal Portfolio
 
 iprakharv
 <p align="center">
