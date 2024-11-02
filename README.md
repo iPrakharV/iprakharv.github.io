@@ -1,4 +1,4 @@
-# iPrakharV's Personal Portfolio
+# iPrakharV's Portfolio
 
 
 
