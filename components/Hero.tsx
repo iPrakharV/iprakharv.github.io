@@ -89,7 +89,7 @@ export function Hero() {
           </span>
           <div className="hidden items-center gap-1.5 rounded-full border border-black/10 bg-white/45 px-3 py-1.5 font-mono text-[10px] text-[#655f52] backdrop-blur md:flex dark:border-white/10 dark:bg-white/[0.06] dark:text-[#aaa18f]">
             <MapPin size={10} />
-            Fort Wayne, IN · GPA 4.0
+            Chicago, IL
           </div>
         </motion.div>
 
@@ -144,7 +144,7 @@ export function Hero() {
 
               <div className="grid grid-cols-3 gap-2 border-y border-black/10 py-4 dark:border-white/10">
                 {[
-                  ['4.0', 'GPA'],
+                  ['3.85', 'Academic GPA'],
                   ['50+', 'Projects'],
                   ['10K+', 'Reached'],
                 ].map(([value, label]) => (
