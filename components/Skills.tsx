@@ -9,11 +9,11 @@ const categories = [
 ]
 
 const awards = [
-  { title: '1st Prize — Robotex India 2018', detail: 'Automated Sumo · India Winner (3kg)' },
-  { title: '1st Prize — Techfest Zonals 2019', detail: 'Maze Solver · IIT Bombay' },
-  { title: '1st Prize — RoboRace 2019', detail: 'Entente 2019' },
-  { title: '1st Place — Razzmataz 2020', detail: 'RoboRace' },
-  { title: '6th Position — IIT Bombay 2020', detail: 'Maze Solver · Top 6 of 35K+ from Asia' },
+  { title: '1st Prize, Robotex India 2018', detail: 'Automated Sumo · India Winner (3kg)' },
+  { title: '1st Prize, Techfest Zonals 2019', detail: 'Maze Solver · IIT Bombay' },
+  { title: '1st Prize, RoboRace 2019', detail: 'Entente 2019' },
+  { title: '1st Place, Razzmataz 2020', detail: 'RoboRace' },
+  { title: '6th Position, IIT Bombay 2020', detail: 'Maze Solver · Top 6 of 35K+ from Asia' },
   { title: "People's Choice Winner", detail: 'Regeneron Health Tech Hackathon' },
 ]
 

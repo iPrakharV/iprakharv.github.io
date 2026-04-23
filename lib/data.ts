@@ -75,7 +75,7 @@ export const projects = [
     description:
       'Real-time fall detection system using pose analysis. Enhanced accuracy by 30% with MediaPipe and PyTorch, reduced false positives by 25%, and deployed responsive alerts for instant notification.',
     tech: ['OpenCV', 'MediaPipe', 'PyTorch', 'JavaScript', 'Raspberry Pi', 'Firebase'],
-    award: "People's Choice — Regeneron Health Tech Hackathon",
+    award: "People's Choice, Regeneron Health Tech Hackathon",
     period: 'May 2024',
     url: '#',
   },
@@ -103,7 +103,7 @@ export const projects = [
     description:
       'Autonomous vehicle system for real-world traffic light and pedestrian detection with Arduino-based collision avoidance. Improved trajectory adjustments by 25%.',
     tech: ['Python', 'Java', 'Arduino', 'OpenCV'],
-    award: '2nd Place — IARRC 2019, University of Waterloo',
+    award: '2nd Place, IARRC 2019, University of Waterloo',
     period: '2020',
     url: '#',
   },
@@ -150,7 +150,7 @@ export const education = [
     school: 'Purdue University',
     degree: 'Bachelor of Science, Computer Science Honors',
     minor: 'Business Studies & Mathematics Minor',
-    period: 'Aug 2023 — May 2027',
+    period: 'Aug 2023 - May 2027',
     location: 'Fort Wayne, IN',
     url: 'https://www.pfw.edu',
   },
@@ -159,7 +159,7 @@ export const education = [
     school: 'City Montessori School',
     degree: 'Indian School Certificate (ISC)',
     minor: 'Mathematics, Science & Computer Science',
-    period: 'Mar 2021 — Mar 2023',
+    period: 'Mar 2021 - Mar 2023',
     location: 'Lucknow, India',
     url: '#',
   },
@@ -170,7 +170,7 @@ export const blogPosts = [
     id: 'voice-transcription',
     title: 'Building Real-Time Voice Transcription for Healthcare',
     excerpt:
-      'How we built a medical voice transcription system at MIE using WhisperAI, DeepSpeech, and custom ASR pipelines — and integrated it into an EHR platform valued at $15M+.',
+      'How we built a medical voice transcription system at MIE using WhisperAI, DeepSpeech, and custom ASR pipelines, then integrated it into an EHR platform valued at $15M+.',
     date: 'Coming Soon',
     readTime: '8 min',
     tag: 'Engineering',
@@ -179,7 +179,7 @@ export const blogPosts = [
     id: 'codeday-india',
     title: 'Community at Scale: Running CodeDay Across India',
     excerpt:
-      'Lessons from organizing hackathons for 5,000+ students across India — logistics, sponsors, and creating meaningful learning experiences with zero budget.',
+      'Lessons from organizing hackathons for 5,000+ students across India, including logistics, sponsors, and creating meaningful learning experiences with zero budget.',
     date: 'Coming Soon',
     readTime: '6 min',
     tag: 'Community',
@@ -188,7 +188,7 @@ export const blogPosts = [
     id: 'iot-security',
     title: 'AES Encryption on Raspberry Pi 5 & ESP32',
     excerpt:
-      'A deep dive into building a secure IoT access control system with Apple Wallet integration — architecture decisions, pitfalls, and everything I learned.',
+      'A deep dive into building a secure IoT access control system with Apple Wallet integration, including architecture decisions, pitfalls, and everything I learned.',
     date: 'Coming Soon',
     readTime: '10 min',
     tag: 'IoT & Security',

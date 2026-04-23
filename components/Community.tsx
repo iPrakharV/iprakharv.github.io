@@ -21,7 +21,7 @@ const communityData = [
     location: 'India & Global',
     url: 'https://www.codeday.org',
     description:
-      'Organizing hackathons and workshops for high school students across India — making programming education accessible, fun, and impactful at scale.',
+      'Organizing hackathons and workshops for high school students across India, making programming education accessible, fun, and impactful at scale.',
     stats: [
       { value: '5,000+', label: 'students reached' },
       { value: '1,000+', label: 'directly mentored' },

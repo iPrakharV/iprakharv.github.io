@@ -133,7 +133,7 @@ export function Hero() {
               <div className="mb-6 flex items-start justify-between">
                 <div>
                   <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-teal-700 dark:text-teal-300">
-                    Operating board
+                    Now Building
                   </p>
                   <h2 className="mt-2 font-serif text-3xl text-[#15120d] dark:text-[#f4efe4]">
                     Building where software meets the physical world.
