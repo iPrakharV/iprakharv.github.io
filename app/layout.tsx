@@ -19,7 +19,7 @@ const dmMono = DM_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Prakhar Verma — Developer & Builder',
+  title: 'Prakhar Verma',
   description:
     'Full-Stack Developer, AI Enthusiast, and Community Leader. Co-Founder at Prepify Studio. GDG Campus Organizer at Purdue University.',
   keywords: [

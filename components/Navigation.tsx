@@ -36,7 +36,7 @@ export function Navigation() {
         className={clsx(
           'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
           scrolled || mobileOpen
-            ? 'bg-stone-50/92 dark:bg-[#0A0A0A]/92 backdrop-blur-md border-b border-stone-200 dark:border-[#1A1A1A]'
+            ? 'bg-[#f5f1e8]/82 dark:bg-[#050505]/82 backdrop-blur-xl border-b border-black/10 dark:border-white/10 shadow-[0_10px_40px_rgb(0_0_0/0.08)]'
             : 'bg-transparent'
         )}
       >
@@ -44,7 +44,7 @@ export function Navigation() {
           {/* Logo */}
           <a
             href="#"
-            className="font-serif text-xl tracking-tight text-stone-900 dark:text-[#EFEFEF] hover:opacity-60 transition-opacity"
+            className="group flex h-10 w-10 items-center justify-center rounded border border-black/10 bg-white/45 font-serif text-xl tracking-tight text-[#15120d] shadow-sm transition-all hover:-translate-y-0.5 hover:border-teal-500/60 dark:border-white/10 dark:bg-white/[0.06] dark:text-[#f4efe4]"
           >
             PV
           </a>
@@ -55,7 +55,7 @@ export function Navigation() {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="font-mono text-[11px] uppercase tracking-[0.12em] text-stone-500 dark:text-[#777] hover:text-stone-900 dark:hover:text-[#EFEFEF] transition-colors"
+                  className="font-mono text-[11px] uppercase tracking-[0.12em] text-[#655f52] transition-colors hover:text-teal-700 dark:text-[#aaa18f] dark:hover:text-teal-200"
                 >
                   {link.label}
                 </a>
@@ -68,7 +68,7 @@ export function Navigation() {
             {mounted && (
               <button
                 onClick={toggleTheme}
-                className="w-9 h-9 flex items-center justify-center rounded text-stone-500 dark:text-[#777] hover:text-stone-900 dark:hover:text-[#EFEFEF] hover:bg-stone-100 dark:hover:bg-[#1A1A1A] transition-all"
+                className="flex h-9 w-9 items-center justify-center rounded border border-black/10 bg-white/35 text-[#655f52] transition-all hover:-translate-y-0.5 hover:border-amber-500/60 hover:text-[#15120d] dark:border-white/10 dark:bg-white/[0.05] dark:text-[#aaa18f] dark:hover:text-[#f4efe4]"
                 aria-label="Toggle theme"
               >
                 {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
@@ -77,14 +77,14 @@ export function Navigation() {
             <a
               href="/resume.pdf"
               download="Prakhar_Verma_Resume.pdf"
-              className="hidden md:flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.12em] px-3 py-2 border border-stone-300 dark:border-[#2A2A2A] text-stone-700 dark:text-[#EFEFEF] hover:border-stone-900 dark:hover:border-[#888] hover:bg-stone-900 hover:text-white dark:hover:bg-[#EFEFEF] dark:hover:text-[#0A0A0A] transition-all rounded"
+              className="hidden items-center gap-1.5 rounded border border-black/10 bg-[#15120d] px-3 py-2 font-mono text-[11px] uppercase tracking-[0.12em] text-[#f4efe4] transition-all hover:-translate-y-0.5 hover:bg-teal-700 dark:border-white/10 dark:bg-[#f4efe4] dark:text-[#050505] dark:hover:bg-teal-200 md:flex"
             >
               <Download size={11} />
               Resume
             </a>
             <button
               onClick={() => setMobileOpen((v) => !v)}
-              className="md:hidden w-9 h-9 flex items-center justify-center rounded text-stone-500 dark:text-[#777] hover:text-stone-900 dark:hover:text-[#EFEFEF] hover:bg-stone-100 dark:hover:bg-[#1A1A1A] transition-all"
+              className="flex h-9 w-9 items-center justify-center rounded border border-black/10 bg-white/35 text-[#655f52] transition-all hover:text-[#15120d] dark:border-white/10 dark:bg-white/[0.05] dark:text-[#aaa18f] dark:hover:text-[#f4efe4] md:hidden"
               aria-label="Toggle menu"
             >
               {mobileOpen ? <X size={16} /> : <Menu size={16} />}
@@ -100,7 +100,7 @@ export function Navigation() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.2, ease: 'easeInOut' }}
-              className="md:hidden overflow-hidden border-t border-stone-200 dark:border-[#1A1A1A]"
+              className="overflow-hidden border-t border-black/10 dark:border-white/10 md:hidden"
             >
               <div className="section-container py-6 flex flex-col gap-4">
                 {navLinks.map((link) => (
@@ -108,7 +108,7 @@ export function Navigation() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
-                    className="font-mono text-sm text-stone-600 dark:text-[#888] hover:text-stone-900 dark:hover:text-[#EFEFEF] transition-colors py-1"
+                    className="py-1 font-mono text-sm text-[#655f52] transition-colors hover:text-teal-700 dark:text-[#aaa18f] dark:hover:text-teal-200"
                   >
                     {link.label}
                   </a>
@@ -116,7 +116,7 @@ export function Navigation() {
                 <a
                   href="/resume.pdf"
                   download="Prakhar_Verma_Resume.pdf"
-                  className="flex items-center gap-2 font-mono text-sm text-stone-600 dark:text-[#888] hover:text-stone-900 dark:hover:text-[#EFEFEF] transition-colors py-1"
+                  className="flex items-center gap-2 py-1 font-mono text-sm text-[#655f52] transition-colors hover:text-teal-700 dark:text-[#aaa18f] dark:hover:text-teal-200"
                 >
                   <Download size={13} />
                   Download Resume

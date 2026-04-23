@@ -1,13 +1,13 @@
 export function Footer() {
   return (
-    <footer className="py-8 border-t border-stone-100 dark:border-[#141414]">
+    <footer className="border-t border-black/10 py-8 dark:border-white/10">
       <div className="section-container flex items-center justify-between">
-        <p className="font-mono text-[11px] text-stone-400 dark:text-[#2A2A2A]">
+        <p className="font-mono text-[11px] text-[#655f52] dark:text-[#aaa18f]">
           © {new Date().getFullYear()} Prakhar Verma
         </p>
         <a
           href="#"
-          className="font-mono text-[11px] text-stone-300 dark:text-[#2A2A2A] hover:text-stone-700 dark:hover:text-[#777] transition-colors"
+          className="font-mono text-[11px] text-teal-700 transition-colors hover:text-amber-700 dark:text-teal-300 dark:hover:text-amber-200"
         >
           ↑ top
         </a>

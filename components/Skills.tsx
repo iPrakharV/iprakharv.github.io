@@ -23,13 +23,13 @@ export function Skills() {
       <div className="section-container">
         <FadeIn>
           <div className="flex items-center gap-4 mb-10">
-            <span className="font-mono text-[11px] text-stone-300 dark:text-[#272727]">03</span>
-            <div className="flex-1 h-px bg-stone-200 dark:bg-[#181818]" />
+            <span className="section-kicker">03</span>
+            <div className="hotline h-px flex-1" />
           </div>
-          <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-stone-400 dark:text-[#444] mb-2">
+          <p className="section-kicker mb-2">
             What I work with
           </p>
-          <h2 className="font-serif text-4xl md:text-5xl text-stone-900 dark:text-[#EFEFEF] mb-14">
+          <h2 className="mb-14 font-serif text-5xl text-[#15120d] dark:text-[#f4efe4] md:text-6xl">
             Skills
           </h2>
         </FadeIn>
@@ -37,15 +37,15 @@ export function Skills() {
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16" staggerDelay={0.1}>
           {categories.map((cat) => (
             <StaggerItem key={cat.key}>
-              <div className="border-t border-stone-100 dark:border-[#161616] pt-5">
-                <h3 className="font-mono text-[10px] uppercase tracking-[0.2em] text-stone-400 dark:text-[#3A3A3A] mb-4">
+              <div className="glass-panel h-full rounded-lg p-5">
+                <h3 className="mb-4 font-mono text-[10px] uppercase tracking-[0.2em] text-teal-700 dark:text-teal-300">
                   {cat.label}
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {skills[cat.key].map((skill) => (
                     <span
                       key={skill}
-                      className="font-mono text-sm text-stone-600 dark:text-[#777] border border-stone-150 dark:border-[#1A1A1A] px-3 py-1.5 rounded-sm hover:border-stone-300 dark:hover:border-[#333] hover:text-stone-900 dark:hover:text-[#CCC] transition-all cursor-default"
+                      className="cursor-default rounded-full border border-black/10 bg-white/35 px-3 py-1.5 font-mono text-sm text-[#4f493f] transition-all hover:-translate-y-0.5 hover:border-amber-500/70 hover:text-[#15120d] dark:border-white/10 dark:bg-white/[0.06] dark:text-[#c8beaa] dark:hover:text-[#f4efe4]"
                     >
                       {skill}
                     </span>
@@ -58,17 +58,17 @@ export function Skills() {
 
         {/* Awards */}
         <FadeIn delay={0.15}>
-          <div className="border-t border-stone-100 dark:border-[#161616] pt-10">
-            <h3 className="font-mono text-[10px] uppercase tracking-[0.2em] text-stone-400 dark:text-[#3A3A3A] mb-8">
+          <div className="border-t border-black/10 pt-10 dark:border-white/10">
+            <h3 className="section-kicker mb-8">
               Honors & Awards
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-6 gap-x-8">
               {awards.map((award) => (
-                <div key={award.title}>
-                  <p className="font-serif text-base text-stone-800 dark:text-[#CCC] mb-0.5">
+                <div key={award.title} className="glass-panel rounded-lg p-4">
+                  <p className="mb-0.5 font-serif text-lg text-[#15120d] dark:text-[#f4efe4]">
                     {award.title}
                   </p>
-                  <p className="font-mono text-[11px] text-stone-400 dark:text-[#3A3A3A] leading-snug">
+                  <p className="font-mono text-[11px] leading-snug text-[#655f52] dark:text-[#aaa18f]">
                     {award.detail}
                   </p>
                 </div>

@@ -8,19 +8,19 @@ export function Blog() {
       <div className="section-container">
         <FadeIn>
           <div className="flex items-center gap-4 mb-10">
-            <span className="font-mono text-[11px] text-stone-300 dark:text-[#272727]">05</span>
-            <div className="flex-1 h-px bg-stone-200 dark:bg-[#181818]" />
+            <span className="section-kicker">05</span>
+            <div className="hotline h-px flex-1" />
           </div>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-14">
             <div>
-              <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-stone-400 dark:text-[#444] mb-2">
+              <p className="section-kicker mb-2">
                 Thoughts & writing
               </p>
-              <h2 className="font-serif text-4xl md:text-5xl text-stone-900 dark:text-[#EFEFEF]">
+              <h2 className="font-serif text-5xl text-[#15120d] dark:text-[#f4efe4] md:text-6xl">
                 Blog
               </h2>
             </div>
-            <p className="font-mono text-[11px] text-stone-400 dark:text-[#3A3A3A] max-w-[200px] leading-relaxed text-right hidden sm:block">
+            <p className="hidden max-w-[200px] text-right font-mono text-[11px] leading-relaxed text-[#655f52] dark:text-[#aaa18f] sm:block">
               Engineering, community,
               and building things.
               <br />Coming soon.
@@ -29,40 +29,32 @@ export function Blog() {
         </FadeIn>
 
         <StaggerContainer staggerDelay={0.09}>
-          {blogPosts.map((post, index) => (
+          {blogPosts.map((post) => (
             <StaggerItem key={post.id}>
-              <div
-                className={`group py-8 flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-10 ${
-                  index !== blogPosts.length - 1
-                    ? 'border-b border-stone-100 dark:border-[#141414]'
-                    : ''
-                }`}
-              >
-                {/* Meta */}
+              <div className="glass-panel group mb-4 flex flex-col gap-4 rounded-lg p-5 transition-all hover:-translate-y-1 sm:flex-row sm:items-start sm:gap-10">
                 <div className="sm:w-40 flex-shrink-0">
-                  <span className="font-mono text-[10px] uppercase tracking-[0.15em] px-2 py-1 bg-stone-100 dark:bg-[#181818] text-stone-500 dark:text-[#555] rounded-sm">
+                  <span className="rounded-full border border-black/10 bg-white/35 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.15em] text-teal-700 dark:border-white/10 dark:bg-white/[0.06] dark:text-teal-300">
                     {post.tag}
                   </span>
-                  <p className="font-mono text-[11px] text-stone-300 dark:text-[#2A2A2A] mt-2">
+                  <p className="mt-2 font-mono text-[11px] text-[#7f7666] dark:text-[#8b806e]">
                     {post.date}
                   </p>
-                  <p className="font-mono text-[11px] text-stone-300 dark:text-[#2A2A2A]">
+                  <p className="font-mono text-[11px] text-[#7f7666] dark:text-[#8b806e]">
                     {post.readTime}
                   </p>
                 </div>
 
-                {/* Content */}
                 <div className="flex-1">
                   <div className="flex items-start justify-between gap-4">
-                    <h3 className="font-serif text-xl md:text-2xl text-stone-800 dark:text-[#DEDEDE] group-hover:text-stone-900 dark:group-hover:text-[#EFEFEF] transition-colors leading-snug">
+                    <h3 className="font-serif text-2xl leading-snug text-[#15120d] transition-colors dark:text-[#f4efe4] md:text-3xl">
                       {post.title}
                     </h3>
                     <ArrowRight
                       size={14}
-                      className="flex-shrink-0 mt-1.5 text-stone-200 dark:text-[#222] group-hover:text-stone-500 dark:group-hover:text-[#555] group-hover:translate-x-0.5 transition-all"
+                      className="mt-1.5 flex-shrink-0 text-amber-600 transition-all group-hover:translate-x-0.5 group-hover:text-teal-700 dark:text-amber-300 dark:group-hover:text-teal-200"
                     />
                   </div>
-                  <p className="font-mono text-sm text-stone-400 dark:text-[#555] mt-2.5 leading-[1.85]">
+                  <p className="mt-2.5 font-mono text-sm leading-[1.85] text-[#4f493f] dark:text-[#c8beaa]">
                     {post.excerpt}
                   </p>
                 </div>

@@ -8,10 +8,25 @@
   }
 
   body {
-    @apply bg-stone-50 text-stone-900 dark:bg-[#080808] dark:text-[#EFEFEF];
+    @apply bg-[#f5f1e8] text-[#15120d] dark:bg-[#050505] dark:text-[#f4efe4];
     font-family: var(--font-mono), 'Courier New', monospace;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-image:
+      radial-gradient(circle at 18% 12%, rgb(20 184 166 / 0.16), transparent 28rem),
+      radial-gradient(circle at 88% 8%, rgb(245 158 11 / 0.16), transparent 24rem),
+      radial-gradient(circle at 75% 82%, rgb(244 63 94 / 0.14), transparent 30rem),
+      linear-gradient(135deg, rgb(255 255 255 / 0.66), transparent 45%);
+    background-attachment: fixed;
+  }
+
+  .dark body {
+    background-image:
+      radial-gradient(circle at 14% 12%, rgb(20 184 166 / 0.2), transparent 28rem),
+      radial-gradient(circle at 86% 10%, rgb(245 158 11 / 0.18), transparent 26rem),
+      radial-gradient(circle at 70% 78%, rgb(244 63 94 / 0.16), transparent 30rem),
+      linear-gradient(135deg, rgb(255 255 255 / 0.04), transparent 42%);
+    background-attachment: fixed;
   }
 
   h1,
@@ -22,7 +37,7 @@
   }
 
   ::selection {
-    @apply bg-stone-200 dark:bg-[#2A2A2A];
+    @apply bg-teal-200 text-stone-950 dark:bg-teal-400 dark:text-black;
   }
 
   ::-webkit-scrollbar {
@@ -34,17 +49,40 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-stone-200 dark:bg-[#222] rounded-full;
+    @apply bg-teal-500/50 rounded-full;
   }
 
   /* Smooth focus rings */
   :focus-visible {
-    @apply outline-none ring-1 ring-stone-400 dark:ring-[#555] ring-offset-2 ring-offset-stone-50 dark:ring-offset-[#080808];
+    @apply outline-none ring-2 ring-teal-400 ring-offset-2 ring-offset-[#f5f1e8] dark:ring-offset-[#050505];
   }
 }
 
 @layer utilities {
   .section-container {
-    @apply max-w-[1100px] mx-auto px-6 md:px-12;
+    @apply max-w-[1180px] mx-auto px-5 sm:px-6 md:px-10;
+  }
+
+  .section-kicker {
+    @apply font-mono text-[11px] uppercase tracking-[0.22em] text-teal-700 dark:text-teal-300;
+  }
+
+  .glass-panel {
+    @apply border border-black/10 dark:border-white/10 bg-white/55 dark:bg-white/[0.055] shadow-[0_24px_80px_rgb(0_0_0/0.12)] dark:shadow-[0_24px_90px_rgb(0_0_0/0.45)] backdrop-blur-xl;
+  }
+
+  .hotline {
+    background: linear-gradient(90deg, #14b8a6, #f59e0b, #f43f5e);
+  }
+
+  .mesh-text {
+    background: linear-gradient(115deg, #0f766e 0%, #111827 34%, #b45309 64%, #be123c 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .dark .mesh-text {
+    background-image: linear-gradient(115deg, #5eead4 0%, #f4efe4 35%, #fbbf24 67%, #fb7185 100%);
   }
 }

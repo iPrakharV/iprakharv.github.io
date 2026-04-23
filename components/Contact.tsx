@@ -30,30 +30,31 @@ const links = [
 
 export function Contact() {
   return (
-    <section id="contact" className="py-24 md:py-32 bg-white dark:bg-[#0D0D0D]">
+    <section id="contact" className="relative overflow-hidden py-24 md:py-32">
+      <div aria-hidden="true" className="absolute inset-x-0 top-0 h-px hotline" />
       <div className="section-container">
         <FadeIn>
           <div className="flex items-center gap-4 mb-10">
-            <span className="font-mono text-[11px] text-stone-300 dark:text-[#272727]">06</span>
-            <div className="flex-1 h-px bg-stone-200 dark:bg-[#181818]" />
+            <span className="section-kicker">06</span>
+            <div className="hotline h-px flex-1" />
           </div>
         </FadeIn>
 
         <div className="flex flex-col md:flex-row gap-16 md:gap-24">
           {/* Left: CTA */}
           <FadeIn className="flex-1">
-            <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-stone-400 dark:text-[#444] mb-4">
+            <p className="section-kicker mb-4">
               Let&apos;s connect
             </p>
             <h2
-              className="font-serif text-stone-900 dark:text-[#EFEFEF] mb-6 leading-tight"
+              className="mesh-text mb-6 font-serif leading-tight"
               style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}
             >
               Let&apos;s build
               <br />
               something.
             </h2>
-            <p className="font-mono text-sm text-stone-500 dark:text-[#666] max-w-xs leading-[1.85]">
+            <p className="max-w-xs font-mono text-sm leading-[1.85] text-[#4f493f] dark:text-[#c8beaa]">
               Open to internships, projects, and interesting conversations.
               I respond to everything.
             </p>
@@ -68,22 +69,22 @@ export function Contact() {
                     href={href}
                     target={href.startsWith('http') ? '_blank' : undefined}
                     rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    className="group flex items-center gap-4 p-4 border border-stone-100 dark:border-[#181818] bg-stone-50/60 dark:bg-[#111] hover:border-stone-300 dark:hover:border-[#2A2A2A] hover:bg-white dark:hover:bg-[#141414] transition-all rounded-sm"
+                    className="glass-panel group flex items-center gap-4 rounded-lg p-4 transition-all hover:-translate-y-1"
                   >
-                    <div className="w-8 h-8 flex items-center justify-center bg-stone-100 dark:bg-[#1A1A1A] text-stone-400 dark:text-[#555] group-hover:text-stone-700 dark:group-hover:text-[#BBB] transition-colors rounded-sm flex-shrink-0">
+                    <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded border border-black/10 bg-white/35 text-teal-700 transition-colors group-hover:text-amber-700 dark:border-white/10 dark:bg-white/[0.06] dark:text-teal-300 dark:group-hover:text-amber-200">
                       <Icon size={14} />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="font-mono text-[10px] text-stone-400 dark:text-[#3A3A3A] mb-0.5">
+                      <p className="mb-0.5 font-mono text-[10px] text-[#7f7666] dark:text-[#8b806e]">
                         {label}
                       </p>
-                      <p className="font-mono text-sm text-stone-700 dark:text-[#999] group-hover:text-stone-900 dark:group-hover:text-[#EFEFEF] transition-colors truncate">
+                      <p className="truncate font-mono text-sm text-[#28231b] transition-colors group-hover:text-teal-700 dark:text-[#f4efe4] dark:group-hover:text-teal-200">
                         {value}
                       </p>
                     </div>
                     <ArrowUpRight
                       size={12}
-                      className="text-stone-300 dark:text-[#222] group-hover:text-stone-500 dark:group-hover:text-[#555] transition-colors flex-shrink-0"
+                      className="flex-shrink-0 text-amber-600 transition-colors group-hover:text-teal-700 dark:text-amber-300 dark:group-hover:text-teal-200"
                     />
                   </a>
                 </StaggerItem>
