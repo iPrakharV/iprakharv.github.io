@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-stone-50 text-stone-900 dark:bg-[#080808] dark:text-[#EFEFEF];
+    font-family: var(--font-mono), 'Courier New', monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-serif), Georgia, serif;
+  }
+
+  ::selection {
+    @apply bg-stone-200 dark:bg-[#2A2A2A];
+  }
+
+  ::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-stone-200 dark:bg-[#222] rounded-full;
+  }
+
+  /* Smooth focus rings */
+  :focus-visible {
+    @apply outline-none ring-1 ring-stone-400 dark:ring-[#555] ring-offset-2 ring-offset-stone-50 dark:ring-offset-[#080808];
+  }
+}
+
+@layer utilities {
+  .section-container {
+    @apply max-w-[1100px] mx-auto px-6 md:px-12;
+  }
+}
