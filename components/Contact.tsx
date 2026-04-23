@@ -170,7 +170,7 @@ export function Contact() {
 
                 {status === 'success' && (
                   <p className="mt-3 font-mono text-xs text-teal-700 dark:text-teal-300">
-                    Message sent. I&apos;ll get it at {email}.
+                    Message sent.
                   </p>
                 )}
                 {status === 'error' && (
