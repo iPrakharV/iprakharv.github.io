@@ -10,8 +10,8 @@ const communityData = [
     description:
       'Building the developer community on campus through Google-focused events, hands-on workshops, and a mentorship program connecting students with industry professionals.',
     stats: [
-      { value: '25+', label: 'workshops / year' },
-      { value: '10K+', label: 'students reached' },
+      { value: 'PFW', label: 'campus chapter' },
+      { value: 'Monthly', label: 'developer events' },
     ],
     tags: ['Android', 'AI/ML', 'Cloud', 'Web APIs'],
   },
