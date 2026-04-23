@@ -5,6 +5,7 @@ import { FadeIn, StaggerContainer, StaggerItem } from '@/components/FadeIn'
 import { Mail, Github, Linkedin, Instagram, ArrowUpRight, Send } from 'lucide-react'
 
 const email = 'iprakharv@gmail.com'
+const formspreeEndpoint = 'https://formspree.io/f/mkokpkqo'
 
 const links = [
   {
@@ -35,21 +36,33 @@ const links = [
 
 export function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
 
-  function sendMessage(event: FormEvent<HTMLFormElement>) {
+  async function sendMessage(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
+    setStatus('submitting')
 
-    const subject = encodeURIComponent(`Portfolio message from ${form.name || 'Website visitor'}`)
-    const body = encodeURIComponent(
-      [
-        `Name: ${form.name || 'Not provided'}`,
-        `Email: ${form.email || 'Not provided'}`,
-        '',
-        form.message,
-      ].join('\n')
-    )
+    const formData = new FormData(event.currentTarget)
+    formData.append('_subject', `Portfolio message from ${form.name || 'Website visitor'}`)
 
-    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`
+    try {
+      const response = await fetch(formspreeEndpoint, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json',
+        },
+      })
+
+      if (!response.ok) {
+        throw new Error('Form submission failed')
+      }
+
+      setForm({ name: '', email: '', message: '' })
+      setStatus('success')
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
@@ -84,7 +97,12 @@ export function Contact() {
 
           <div className="grid gap-5 xl:grid-cols-[1.05fr_0.95fr]">
             <FadeIn>
-              <form onSubmit={sendMessage} className="glass-panel rounded-lg p-5">
+              <form
+                onSubmit={sendMessage}
+                action={formspreeEndpoint}
+                method="POST"
+                className="glass-panel rounded-lg p-5"
+              >
                 <div className="mb-5 flex items-center justify-between">
                   <div>
                     <p className="section-kicker">Message me</p>
@@ -103,6 +121,7 @@ export function Contact() {
                       Name
                     </span>
                     <input
+                      name="name"
                       value={form.name}
                       onChange={(event) => setForm({ ...form, name: event.target.value })}
                       className="w-full rounded border border-black/10 bg-white/50 px-3 py-3 font-mono text-sm text-[#15120d] transition-colors placeholder:text-[#9c927f] focus:border-teal-500 dark:border-white/10 dark:bg-black/20 dark:text-[#f4efe4] dark:placeholder:text-[#6f6658]"
@@ -115,7 +134,9 @@ export function Contact() {
                       Your email
                     </span>
                     <input
+                      name="email"
                       type="email"
+                      required
                       value={form.email}
                       onChange={(event) => setForm({ ...form, email: event.target.value })}
                       className="w-full rounded border border-black/10 bg-white/50 px-3 py-3 font-mono text-sm text-[#15120d] transition-colors placeholder:text-[#9c927f] focus:border-teal-500 dark:border-white/10 dark:bg-black/20 dark:text-[#f4efe4] dark:placeholder:text-[#6f6658]"
@@ -128,6 +149,7 @@ export function Contact() {
                       Message
                     </span>
                     <textarea
+                      name="message"
                       required
                       rows={5}
                       value={form.message}
@@ -140,10 +162,22 @@ export function Contact() {
 
                 <button
                   type="submit"
-                  className="mt-4 flex w-full items-center justify-center gap-2 rounded bg-[#15120d] px-5 py-3 font-mono text-[11px] uppercase tracking-[0.12em] text-[#f4efe4] transition-all hover:-translate-y-0.5 hover:bg-teal-700 dark:bg-[#f4efe4] dark:text-[#050505] dark:hover:bg-teal-200"
+                  disabled={status === 'submitting'}
+                  className="mt-4 flex w-full items-center justify-center gap-2 rounded bg-[#15120d] px-5 py-3 font-mono text-[11px] uppercase tracking-[0.12em] text-[#f4efe4] transition-all hover:-translate-y-0.5 hover:bg-teal-700 disabled:cursor-not-allowed disabled:opacity-60 dark:bg-[#f4efe4] dark:text-[#050505] dark:hover:bg-teal-200"
                 >
-                  Send message <Send size={13} />
+                  {status === 'submitting' ? 'Sending...' : 'Send message'} <Send size={13} />
                 </button>
+
+                {status === 'success' && (
+                  <p className="mt-3 font-mono text-xs text-teal-700 dark:text-teal-300">
+                    Message sent. I&apos;ll get it at {email}.
+                  </p>
+                )}
+                {status === 'error' && (
+                  <p className="mt-3 font-mono text-xs text-rose-700 dark:text-rose-300">
+                    Something went wrong. You can still email me directly at {email}.
+                  </p>
+                )}
               </form>
             </FadeIn>
 
