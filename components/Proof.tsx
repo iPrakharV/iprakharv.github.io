@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { FadeIn, StaggerContainer, StaggerItem } from '@/components/FadeIn'
 import { Camera, Code2, Mic2, Trophy, Users } from 'lucide-react'
 
@@ -8,6 +9,7 @@ const moments = [
     detail: 'Technical sessions, hands-on demos, and student developer programming.',
     icon: Mic2,
     accent: 'from-teal-400/40 via-transparent to-amber-300/30',
+    image: '/proof/speaking-workshops.webp',
   },
   {
     title: 'Hackathon Rooms',
@@ -56,19 +58,30 @@ export function Proof() {
         </FadeIn>
 
         <StaggerContainer className="grid gap-5 lg:grid-cols-3" staggerDelay={0.08}>
-          {moments.map(({ title, label, detail, icon: Icon, accent }) => (
+          {moments.map(({ title, label, detail, icon: Icon, accent, image }) => (
             <StaggerItem key={title}>
               <article className="glass-panel group relative h-full overflow-hidden rounded-lg p-4 transition-all hover:-translate-y-1">
                 <div className={`relative mb-5 aspect-[4/3] overflow-hidden rounded bg-gradient-to-br ${accent}`}>
-                  <div
-                    aria-hidden="true"
-                    className="absolute inset-0 opacity-35"
-                    style={{
-                      backgroundImage:
-                        'linear-gradient(rgba(255,255,255,.18) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.18) 1px, transparent 1px)',
-                      backgroundSize: '24px 24px',
-                    }}
-                  />
+                  {image ? (
+                    <Image
+                      src={image}
+                      alt={`${title} proof`}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, 100vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    />
+                  ) : (
+                    <div
+                      aria-hidden="true"
+                      className="absolute inset-0 opacity-35"
+                      style={{
+                        backgroundImage:
+                          'linear-gradient(rgba(255,255,255,.18) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.18) 1px, transparent 1px)',
+                        backgroundSize: '24px 24px',
+                      }}
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
                   <div className="absolute inset-4 rounded border border-white/20" />
                   <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between">
                     <div>
