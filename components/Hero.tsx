@@ -25,7 +25,7 @@ const roles = [
 const socials = [
   { href: 'https://github.com/iprakharv', icon: Github, label: 'GitHub' },
   { href: 'https://linkedin.com/in/iprakharv', icon: Linkedin, label: 'LinkedIn' },
-  { href: 'mailto:connect@iprakharv.com', icon: Mail, label: 'Email' },
+  { href: 'mailto:iprakharv@gmail.com', icon: Mail, label: 'Email' },
   { href: 'https://instagram.com/iprakharv', icon: Instagram, label: 'Instagram' },
 ]
 

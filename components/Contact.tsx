@@ -1,11 +1,16 @@
+'use client'
+
+import { FormEvent, useState } from 'react'
 import { FadeIn, StaggerContainer, StaggerItem } from '@/components/FadeIn'
-import { Mail, Github, Linkedin, Instagram, ArrowUpRight } from 'lucide-react'
+import { Mail, Github, Linkedin, Instagram, ArrowUpRight, Send } from 'lucide-react'
+
+const email = 'iprakharv@gmail.com'
 
 const links = [
   {
     label: 'Email',
-    value: 'connect@iprakharv.com',
-    href: 'mailto:connect@iprakharv.com',
+    value: email,
+    href: `mailto:${email}`,
     icon: Mail,
   },
   {
@@ -29,6 +34,24 @@ const links = [
 ]
 
 export function Contact() {
+  const [form, setForm] = useState({ name: '', email: '', message: '' })
+
+  function sendMessage(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+
+    const subject = encodeURIComponent(`Portfolio message from ${form.name || 'Website visitor'}`)
+    const body = encodeURIComponent(
+      [
+        `Name: ${form.name || 'Not provided'}`,
+        `Email: ${form.email || 'Not provided'}`,
+        '',
+        form.message,
+      ].join('\n')
+    )
+
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`
+  }
+
   return (
     <section id="contact" className="relative overflow-hidden py-24 md:py-32">
       <div aria-hidden="true" className="absolute inset-x-0 top-0 h-px hotline" />
@@ -40,8 +63,7 @@ export function Contact() {
           </div>
         </FadeIn>
 
-        <div className="flex flex-col md:flex-row gap-16 md:gap-24">
-          {/* Left: CTA */}
+        <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
           <FadeIn className="flex-1">
             <p className="section-kicker mb-4">
               Let&apos;s connect
@@ -54,15 +76,78 @@ export function Contact() {
               <br />
               something.
             </h2>
-            <p className="max-w-xs font-mono text-sm leading-[1.85] text-[#4f493f] dark:text-[#c8beaa]">
+            <p className="max-w-sm font-mono text-sm leading-[1.85] text-[#4f493f] dark:text-[#c8beaa]">
               Open to internships, projects, and interesting conversations.
               I respond to everything.
             </p>
           </FadeIn>
 
-          {/* Right: links */}
-          <div className="md:w-72">
-            <StaggerContainer className="space-y-2" staggerDelay={0.07}>
+          <div className="grid gap-5 xl:grid-cols-[1.05fr_0.95fr]">
+            <FadeIn>
+              <form onSubmit={sendMessage} className="glass-panel rounded-lg p-5">
+                <div className="mb-5 flex items-center justify-between">
+                  <div>
+                    <p className="section-kicker">Message me</p>
+                    <h3 className="mt-2 font-serif text-3xl text-[#15120d] dark:text-[#f4efe4]">
+                      Send a note
+                    </h3>
+                  </div>
+                  <div className="flex h-11 w-11 items-center justify-center rounded border border-black/10 bg-white/35 text-teal-700 dark:border-white/10 dark:bg-white/[0.06] dark:text-teal-300">
+                    <Mail size={18} />
+                  </div>
+                </div>
+
+                <div className="grid gap-3">
+                  <label className="block">
+                    <span className="mb-1.5 block font-mono text-[10px] uppercase tracking-[0.16em] text-[#7f7666] dark:text-[#8b806e]">
+                      Name
+                    </span>
+                    <input
+                      value={form.name}
+                      onChange={(event) => setForm({ ...form, name: event.target.value })}
+                      className="w-full rounded border border-black/10 bg-white/50 px-3 py-3 font-mono text-sm text-[#15120d] transition-colors placeholder:text-[#9c927f] focus:border-teal-500 dark:border-white/10 dark:bg-black/20 dark:text-[#f4efe4] dark:placeholder:text-[#6f6658]"
+                      placeholder="Your name"
+                    />
+                  </label>
+
+                  <label className="block">
+                    <span className="mb-1.5 block font-mono text-[10px] uppercase tracking-[0.16em] text-[#7f7666] dark:text-[#8b806e]">
+                      Your email
+                    </span>
+                    <input
+                      type="email"
+                      value={form.email}
+                      onChange={(event) => setForm({ ...form, email: event.target.value })}
+                      className="w-full rounded border border-black/10 bg-white/50 px-3 py-3 font-mono text-sm text-[#15120d] transition-colors placeholder:text-[#9c927f] focus:border-teal-500 dark:border-white/10 dark:bg-black/20 dark:text-[#f4efe4] dark:placeholder:text-[#6f6658]"
+                      placeholder="you@example.com"
+                    />
+                  </label>
+
+                  <label className="block">
+                    <span className="mb-1.5 block font-mono text-[10px] uppercase tracking-[0.16em] text-[#7f7666] dark:text-[#8b806e]">
+                      Message
+                    </span>
+                    <textarea
+                      required
+                      rows={5}
+                      value={form.message}
+                      onChange={(event) => setForm({ ...form, message: event.target.value })}
+                      className="w-full resize-none rounded border border-black/10 bg-white/50 px-3 py-3 font-mono text-sm text-[#15120d] transition-colors placeholder:text-[#9c927f] focus:border-teal-500 dark:border-white/10 dark:bg-black/20 dark:text-[#f4efe4] dark:placeholder:text-[#6f6658]"
+                      placeholder="Tell me what you want to build."
+                    />
+                  </label>
+                </div>
+
+                <button
+                  type="submit"
+                  className="mt-4 flex w-full items-center justify-center gap-2 rounded bg-[#15120d] px-5 py-3 font-mono text-[11px] uppercase tracking-[0.12em] text-[#f4efe4] transition-all hover:-translate-y-0.5 hover:bg-teal-700 dark:bg-[#f4efe4] dark:text-[#050505] dark:hover:bg-teal-200"
+                >
+                  Send message <Send size={13} />
+                </button>
+              </form>
+            </FadeIn>
+
+            <StaggerContainer className="grid content-start gap-3" staggerDelay={0.07}>
               {links.map(({ label, value, href, icon: Icon }) => (
                 <StaggerItem key={href}>
                   <a
@@ -71,19 +156,19 @@ export function Contact() {
                     rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
                     className="glass-panel group flex items-center gap-4 rounded-lg p-4 transition-all hover:-translate-y-1"
                   >
-                    <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded border border-black/10 bg-white/35 text-teal-700 transition-colors group-hover:text-amber-700 dark:border-white/10 dark:bg-white/[0.06] dark:text-teal-300 dark:group-hover:text-amber-200">
-                      <Icon size={14} />
+                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded border border-black/10 bg-white/35 text-teal-700 transition-colors group-hover:text-amber-700 dark:border-white/10 dark:bg-white/[0.06] dark:text-teal-300 dark:group-hover:text-amber-200">
+                      <Icon size={18} />
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="mb-0.5 font-mono text-[10px] text-[#7f7666] dark:text-[#8b806e]">
+                    <div className="min-w-0 flex-1">
+                      <p className="mb-1 font-mono text-[10px] uppercase tracking-[0.14em] text-[#7f7666] dark:text-[#8b806e]">
                         {label}
                       </p>
-                      <p className="truncate font-mono text-sm text-[#28231b] transition-colors group-hover:text-teal-700 dark:text-[#f4efe4] dark:group-hover:text-teal-200">
+                      <p className="break-words font-mono text-base leading-snug text-[#28231b] transition-colors group-hover:text-teal-700 dark:text-[#f4efe4] dark:group-hover:text-teal-200">
                         {value}
                       </p>
                     </div>
                     <ArrowUpRight
-                      size={12}
+                      size={14}
                       className="flex-shrink-0 text-amber-600 transition-colors group-hover:text-teal-700 dark:text-amber-300 dark:group-hover:text-teal-200"
                     />
                   </a>
