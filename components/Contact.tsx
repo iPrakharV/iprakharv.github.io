@@ -71,7 +71,7 @@ export function Contact() {
       <div className="section-container">
         <FadeIn>
           <div className="flex items-center gap-4 mb-10">
-            <span className="section-kicker">06</span>
+            <span className="section-kicker">07</span>
             <div className="hotline h-px flex-1" />
           </div>
         </FadeIn>

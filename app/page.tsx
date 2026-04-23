@@ -5,6 +5,7 @@ import { Projects } from '@/components/Projects'
 import { Skills } from '@/components/Skills'
 import { Community } from '@/components/Community'
 import { Blog } from '@/components/Blog'
+import { Proof } from '@/components/Proof'
 import { Contact } from '@/components/Contact'
 import { Footer } from '@/components/Footer'
 
@@ -19,6 +20,7 @@ export default function Home() {
         <Skills />
         <Community />
         <Blog />
+        <Proof />
         <Contact />
       </main>
       <Footer />

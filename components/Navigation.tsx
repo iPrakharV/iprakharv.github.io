@@ -12,6 +12,7 @@ const navLinks = [
   { href: '#skills', label: 'Skills' },
   { href: '#community', label: 'Community' },
   { href: '#blog', label: 'Blog' },
+  { href: '#proof', label: 'Proof' },
   { href: '#contact', label: 'Contact' },
 ]
 
