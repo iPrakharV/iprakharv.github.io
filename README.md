@@ -4,4 +4,4 @@ A new version of my portfolio is currently under construction. Stay tuned for ex
 
 In the meantime, you can view my previous portfolio here: [Previous Portfolio](https://iprakharv.com/portfolio)
 
-Thanks for your patience!
+Thanks for your patience.
