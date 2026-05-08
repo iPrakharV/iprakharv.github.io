@@ -68,44 +68,52 @@ export const otherRoles = [
   },
 ]
 
-export const projects = [
+type Project = {
+  id: string
+  name: string
+  description: string
+  tech: string[]
+  award?: string
+  period: string
+  url: string
+}
+
+export const projects: Project[] = [
   {
-    id: 'safefall',
-    name: 'SafeFall',
+    id: 'mnist-adversary',
+    name: 'MNIST Adversary',
     description:
-      'Real-time fall detection system using pose analysis. Enhanced accuracy by 30% with MediaPipe and PyTorch, reduced false positives by 25%, and deployed responsive alerts for instant notification.',
-    tech: ['OpenCV', 'MediaPipe', 'PyTorch', 'JavaScript', 'Raspberry Pi', 'Firebase'],
-    award: "People's Choice, Regeneron Health Tech Hackathon",
-    period: 'May 2024',
-    url: '#',
+      'Browser-side adversarial ML demo that loads a trained MNIST model, runs clean predictions, and applies FGSM perturbations with TensorFlow.js.',
+    tech: ['TypeScript', 'Next.js', 'TensorFlow.js', 'PyTorch'],
+    period: 'May 2026',
+    url: 'https://github.com/iPrakharV/MNIST-Adversary',
+  },
+  {
+    id: 'portfolio',
+    name: 'Personal Portfolio',
+    description:
+      'Static Next.js portfolio with typed content, animated sections, dark mode, a contact form, and GitHub Pages deployment through Actions.',
+    tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'GitHub Actions'],
+    period: '2026',
+    url: 'https://github.com/iPrakharV/iprakharv.github.io',
   },
   {
     id: 'skycanvas',
     name: 'SkyCanvas',
     description:
-      'Drone-based aerial imaging platform processing real-time positioning data with 95% image fidelity accuracy. Flask control interface improved operational efficiency by 30%.',
-    tech: ['Flask', 'Python', 'OpenCV', 'JavaScript', 'HTML'],
-    period: 'April 2024',
-    url: '#',
+      'Python and OpenCV prototype for perspective-aware aerial image planning, built around plotting and camera-view experiments for drone displays.',
+    tech: ['Python', 'OpenCV', 'Matplotlib'],
+    period: 'Jun 2024',
+    url: 'https://github.com/iPrakharV/SkyCanvas',
   },
   {
-    id: 'mailmark',
-    name: 'MailMark',
+    id: 'todoist-vue-meteor',
+    name: 'ToDoist Vue Meteor3',
     description:
-      'Cross-platform email branding tool for professionals. 60 FPS, sub-2-second startup, serving 1,000+ users. Received ₹180,000 in initial angel funding.',
-    tech: ['Flutter', 'Firebase', 'Dart', 'Vercel'],
-    period: 'March 2024',
-    url: '#',
-  },
-  {
-    id: 'troonomega',
-    name: 'TronooMega',
-    description:
-      'Autonomous vehicle system for real-world traffic light and pedestrian detection with Arduino-based collision avoidance. Improved trajectory adjustments by 25%.',
-    tech: ['Python', 'Java', 'Arduino', 'OpenCV'],
-    award: '2nd Place, IARRC 2019, University of Waterloo',
-    period: '2020',
-    url: '#',
+      'Task management app built with Vue, Meteor, Mongo collections, publications, methods, routing, and reusable UI components.',
+    tech: ['Vue', 'Meteor', 'MongoDB', 'Tailwind CSS', 'Vite'],
+    period: 'Feb 2025',
+    url: 'https://github.com/iPrakharV/ToDoist-vue-meteor3',
   },
 ]
 
@@ -162,35 +170,5 @@ export const education = [
     period: 'Mar 2021 - Mar 2023',
     location: 'Lucknow, India',
     url: '#',
-  },
-]
-
-export const blogPosts = [
-  {
-    id: 'voice-transcription',
-    title: 'Building Real-Time Voice Transcription for Healthcare',
-    excerpt:
-      'How we built a medical voice transcription system at MIE using WhisperAI, DeepSpeech, and custom ASR pipelines, then integrated it into an EHR platform valued at $15M+.',
-    date: 'Coming Soon',
-    readTime: '8 min',
-    tag: 'Engineering',
-  },
-  {
-    id: 'codeday-india',
-    title: 'Community at Scale: Running CodeDay Across India',
-    excerpt:
-      'Lessons from organizing hackathons for 5,000+ students across India, including logistics, sponsors, and creating meaningful learning experiences with zero budget.',
-    date: 'Coming Soon',
-    readTime: '6 min',
-    tag: 'Community',
-  },
-  {
-    id: 'iot-security',
-    title: 'AES Encryption on Raspberry Pi 5 & ESP32',
-    excerpt:
-      'A deep dive into building a secure IoT access control system with Apple Wallet integration, including architecture decisions, pitfalls, and everything I learned.',
-    date: 'Coming Soon',
-    readTime: '10 min',
-    tag: 'IoT & Security',
   },
 ]

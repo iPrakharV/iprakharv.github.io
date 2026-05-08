@@ -12,13 +12,10 @@ interface FadeInProps {
 }
 
 const getVariants = (direction: FadeInProps['direction'] = 'up'): Variants => {
-  const offset = 20
+  void direction
+
   return {
-    hidden: {
-      opacity: 0,
-      y: direction === 'up' ? offset : direction === 'down' ? -offset : 0,
-      x: direction === 'left' ? offset : direction === 'right' ? -offset : 0,
-    },
+    hidden: { opacity: 1, y: 0, x: 0 },
     visible: { opacity: 1, y: 0, x: 0 },
   }
 }
@@ -79,7 +76,7 @@ export function StaggerItem({
   return (
     <motion.div
       variants={{
-        hidden: { opacity: 0, y: 20 },
+        hidden: { opacity: 1, y: 0 },
         visible: {
           opacity: 1,
           y: 0,

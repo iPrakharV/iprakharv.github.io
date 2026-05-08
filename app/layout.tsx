@@ -19,19 +19,37 @@ const dmMono = DM_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Prakhar Verma',
+  metadataBase: new URL('https://iprakharv.com'),
+  title: {
+    default: 'Prakhar Verma',
+    template: '%s | Prakhar Verma',
+  },
   description:
-    'Full-Stack Developer, AI Enthusiast, and Community Leader. Co-Founder at Prepify Studio. GDG Campus Organizer at Purdue University.',
+    'Computer science honors student at Purdue Fort Wayne building full-stack, ML, and hardware projects.',
   keywords: [
     'Prakhar Verma',
-    'Developer',
+    'Software Developer',
     'Portfolio',
     'Purdue University',
     'GDG',
     'CodeDay',
-    'Full-Stack',
+    'Full-Stack Developer',
+    'Machine Learning',
+    'IoT',
   ],
-  authors: [{ name: 'Prakhar Verma', url: 'https://iprakharv.github.io' }],
+  authors: [{ name: 'Prakhar Verma', url: 'https://iprakharv.com' }],
+  creator: 'Prakhar Verma',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'Prakhar Verma',
+    description:
+      'Computer science honors student at Purdue Fort Wayne building full-stack, ML, and hardware projects.',
+    url: 'https://iprakharv.com',
+    siteName: 'Prakhar Verma',
+    type: 'website',
+  },
 }
 
 export default function RootLayout({

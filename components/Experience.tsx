@@ -3,6 +3,8 @@ import { experience, otherRoles } from '@/lib/data'
 import { ExternalLink } from 'lucide-react'
 
 function ExpRow({ exp }: { exp: typeof experience[0] }) {
+  const hasUrl = exp.url !== '#'
+
   return (
     <div className="glass-panel group relative overflow-hidden rounded-lg p-5 transition-all hover:-translate-y-1 md:p-7">
       <div className="absolute inset-x-0 top-0 h-1 hotline opacity-80" />
@@ -11,15 +13,21 @@ function ExpRow({ exp }: { exp: typeof experience[0] }) {
           <span className="block rounded-full border border-black/10 bg-white/45 px-3 py-1.5 font-mono text-[11px] text-[#655f52] dark:border-white/10 dark:bg-white/[0.06] dark:text-[#aaa18f]">
             {exp.period}
           </span>
-          <a
-            href={exp.url}
-            target={exp.url !== '#' ? '_blank' : undefined}
-            rel={exp.url !== '#' ? 'noopener noreferrer' : undefined}
-            className="mt-3 inline-flex items-center gap-1 font-mono text-xs text-teal-700 transition-colors hover:text-amber-700 dark:text-teal-300 dark:hover:text-amber-200"
-          >
-            {exp.company}
-            {exp.url !== '#' && <ExternalLink size={9} />}
-          </a>
+          {hasUrl ? (
+            <a
+              href={exp.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-flex items-center gap-1 font-mono text-xs text-teal-700 transition-colors hover:text-amber-700 dark:text-teal-300 dark:hover:text-amber-200"
+            >
+              {exp.company}
+              <ExternalLink size={9} />
+            </a>
+          ) : (
+            <p className="mt-3 font-mono text-xs text-teal-700 dark:text-teal-300">
+              {exp.company}
+            </p>
+          )}
           <p className="mt-1 font-mono text-[10px] text-[#7f7666] dark:text-[#8b806e]">
             {exp.location}
           </p>

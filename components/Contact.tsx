@@ -4,7 +4,7 @@ import { FormEvent, useState } from 'react'
 import { FadeIn, StaggerContainer, StaggerItem } from '@/components/FadeIn'
 import { Mail, Github, Linkedin, Instagram, ArrowUpRight, Send } from 'lucide-react'
 
-const email = 'iprakharv@gmail.com'
+const email = 'connect@iprakharv.com'
 const formspreeEndpoint = 'https://formspree.io/f/mkokpkqo'
 
 const links = [

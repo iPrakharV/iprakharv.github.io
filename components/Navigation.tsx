@@ -11,7 +11,6 @@ const navLinks = [
   { href: '#projects', label: 'Projects' },
   { href: '#skills', label: 'Skills' },
   { href: '#community', label: 'Community' },
-  { href: '#blog', label: 'Blog' },
   { href: '#contact', label: 'Contact' },
 ]
 
@@ -36,7 +35,7 @@ export function Navigation() {
         className={clsx(
           'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
           scrolled || mobileOpen
-            ? 'bg-[#f5f1e8]/82 dark:bg-[#050505]/82 backdrop-blur-xl border-b border-black/10 dark:border-white/10 shadow-[0_10px_40px_rgb(0_0_0/0.08)]'
+            ? 'bg-[#f7f7f2]/82 dark:bg-[#050505]/82 backdrop-blur-xl border-b border-black/10 dark:border-white/10 shadow-[0_10px_40px_rgb(0_0_0/0.08)]'
             : 'bg-transparent'
         )}
       >

@@ -26,8 +26,12 @@ export function Projects() {
         <StaggerContainer className="grid grid-cols-1 gap-5 md:grid-cols-2" staggerDelay={0.08}>
           {projects.map((project, index) => (
             <StaggerItem key={project.id}>
-              <motion.div
-                className="glass-panel group relative h-full cursor-default overflow-hidden rounded-lg p-6 transition-all hover:-translate-y-1"
+              <motion.a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Open ${project.name} on GitHub`}
+                className="glass-panel group relative block h-full overflow-hidden rounded-lg p-6 transition-all hover:-translate-y-1"
                 whileHover="hover"
               >
                 <div className="absolute inset-x-0 top-0 h-1 hotline opacity-80" />
@@ -83,14 +87,14 @@ export function Projects() {
                     ))}
                   </div>
                 </div>
-              </motion.div>
+              </motion.a>
             </StaggerItem>
           ))}
         </StaggerContainer>
 
         <FadeIn delay={0.2}>
           <p className="mt-10 pl-0 font-mono text-xs text-[#655f52] dark:text-[#aaa18f] md:pl-9">
-            50+ more on{' '}
+            More work on{' '}
             <a
               href="https://github.com/iprakharv"
               target="_blank"

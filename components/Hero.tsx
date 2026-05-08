@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowRight, CircuitBoard, Github, Instagram, Linkedin, Mail, MapPin, Sparkles } from 'lucide-react'
+import { ArrowRight, CircuitBoard, Download, Github, Instagram, Linkedin, Mail, MapPin, Sparkles } from 'lucide-react'
 
 const container = {
   hidden: {},
@@ -10,22 +10,22 @@ const container = {
 }
 
 const item = {
-  hidden: { opacity: 0, y: 28 },
+  hidden: { opacity: 1, y: 0 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.25, 0.4, 0.25, 1] } },
 }
 
 const roles = [
-  'Full-Stack Developer',
-  'AI Systems Builder',
+  'Software Developer',
+  'ML Project Builder',
+  'IoT Systems Builder',
   'Community Organizer',
-  'IoT & Hardware Hacker',
-  'GitHub Campus Expert',
+  'CS Honors Student',
 ]
 
 const socials = [
   { href: 'https://github.com/iprakharv', icon: Github, label: 'GitHub' },
   { href: 'https://linkedin.com/in/iprakharv', icon: Linkedin, label: 'LinkedIn' },
-  { href: 'mailto:iprakharv@gmail.com', icon: Mail, label: 'Email' },
+  { href: 'mailto:connect@iprakharv.com', icon: Mail, label: 'Email' },
   { href: 'https://instagram.com/iprakharv', icon: Instagram, label: 'Instagram' },
 ]
 
@@ -42,7 +42,7 @@ function CyclingRole() {
       <AnimatePresence mode="wait">
         <motion.span
           key={index}
-          initial={{ y: 12, opacity: 0 }}
+          initial={{ y: 0, opacity: 1 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -12, opacity: 0 }}
           transition={{ duration: 0.3, ease: [0.25, 0.4, 0.25, 1] }}
@@ -67,18 +67,10 @@ export function Hero() {
           backgroundSize: '44px 44px',
         }}
       />
-      <div
-        aria-hidden="true"
-        className="absolute left-1/2 top-20 h-[36rem] w-[36rem] -translate-x-1/2 rounded-full border border-teal-400/20"
-      />
-      <div
-        aria-hidden="true"
-        className="absolute -right-40 top-24 h-96 w-96 rounded-full border border-amber-400/30"
-      />
 
       <div className="section-container relative flex w-full flex-1 flex-col">
         <motion.div
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.6 }}
           className="flex items-center justify-between pb-0 pt-28"
@@ -89,7 +81,7 @@ export function Hero() {
           </span>
           <div className="hidden items-center gap-1.5 rounded-full border border-black/10 bg-white/45 px-3 py-1.5 font-mono text-[10px] text-[#655f52] backdrop-blur md:flex dark:border-white/10 dark:bg-white/[0.06] dark:text-[#aaa18f]">
             <MapPin size={10} />
-            Chicago, IL
+            Fort Wayne, IN
           </div>
         </motion.div>
 
@@ -106,7 +98,7 @@ export function Hero() {
                 className="mb-5 inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/50 px-3 py-2 font-mono text-[11px] uppercase tracking-[0.18em] text-[#655f52] backdrop-blur dark:border-white/10 dark:bg-white/[0.06] dark:text-[#aaa18f]"
               >
                 <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_18px_rgb(52_211_153)]" />
-                AI · full stack · hardware
+                full stack · ML · hardware
               </motion.div>
 
               <motion.h1
@@ -123,8 +115,8 @@ export function Hero() {
                 variants={item}
                 className="mt-6 max-w-2xl font-mono text-base leading-[1.85] text-[#4f493f] dark:text-[#c8beaa]"
               >
-                I turn ambitious ideas into useful products: healthcare AI, IoT security,
-                developer communities, and systems that move from prototype to real-world use.
+                Computer science honors student building full-stack, ML, and hardware projects
+                across healthcare, developer tools, and campus communities.
               </motion.p>
             </div>
 
@@ -136,7 +128,7 @@ export function Hero() {
                     Now Building
                   </p>
                   <h2 className="mt-2 font-serif text-3xl text-[#15120d] dark:text-[#f4efe4]">
-                    Building where software meets the physical world.
+                    Software, ML, and hardware projects with real users in mind.
                   </h2>
                 </div>
                 <CircuitBoard className="mt-1 text-amber-600 dark:text-amber-300" size={28} />
@@ -144,9 +136,9 @@ export function Hero() {
 
               <div className="grid grid-cols-3 gap-2 border-y border-black/10 py-4 dark:border-white/10">
                 {[
-                  ['3.85', 'Academic GPA'],
-                  ['50+', 'Projects'],
-                  ['10K+', 'Reached'],
+                  ['2027', 'CS Honors'],
+                  ['3.85', 'GPA'],
+                  ['Purdue', 'Fort Wayne'],
                 ].map(([value, label]) => (
                   <div key={label} className="rounded border border-black/10 bg-white/35 p-3 dark:border-white/10 dark:bg-black/20">
                     <p className="font-serif text-3xl leading-none text-[#15120d] dark:text-[#f4efe4]">
@@ -166,7 +158,7 @@ export function Hero() {
                   </p>
                   <p className="text-[#28231b] dark:text-[#f4efe4]">GDG Campus Organizer</p>
                   <p className="text-[#28231b] dark:text-[#f4efe4]">CodeDay Core Team Lead</p>
-                  <p className="text-[#28231b] dark:text-[#f4efe4]">GitHub Campus Expert Trainee</p>
+                  <p className="text-[#28231b] dark:text-[#f4efe4]">Open to software internships</p>
                 </div>
                 <div>
                   <p className="mb-1.5 text-[10px] uppercase tracking-[0.18em] text-[#655f52] dark:text-[#aaa18f]">
@@ -195,9 +187,9 @@ export function Hero() {
                 <a
                   href="/resume.pdf"
                   download="Prakhar_Verma_Resume.pdf"
-                  className="rounded border border-black/15 bg-white/35 px-5 py-3 font-mono text-[11px] uppercase tracking-[0.1em] text-[#4f493f] backdrop-blur transition-all hover:-translate-y-0.5 hover:border-amber-500/70 hover:text-[#15120d] dark:border-white/15 dark:bg-white/[0.05] dark:text-[#c8beaa] dark:hover:text-[#f4efe4]"
+                  className="flex items-center gap-2 rounded border border-black/15 bg-white/35 px-5 py-3 font-mono text-[11px] uppercase tracking-[0.1em] text-[#4f493f] backdrop-blur transition-all hover:-translate-y-0.5 hover:border-amber-500/70 hover:text-[#15120d] dark:border-white/15 dark:bg-white/[0.05] dark:text-[#c8beaa] dark:hover:text-[#f4efe4]"
                 >
-                  Resume ↓
+                  Resume <Download size={11} />
                 </a>
               </div>
             </div>
@@ -220,7 +212,7 @@ export function Hero() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2, duration: 0.8 }}
           className="flex items-center gap-3 pb-10"
